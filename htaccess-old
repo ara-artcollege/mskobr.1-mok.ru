@@ -1,0 +1,18 @@
+AddType "text/html; charset=utf-8" .htm .html
+AddDefaultCharset utf-8
+PHP_VALUE default_charset utf-8
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.mskobr.1-mok.ru
+RewriteRule ^(.*)$ http://mskobr.1-mok.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule .* index.php [L]
+
+ErrorDocument 401 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+
+RewriteCond %{REQUEST_URI} (.*)
+RewriteRule ^(.*)$ http://1-mok.mskobr.ru/ [L,R=301]
