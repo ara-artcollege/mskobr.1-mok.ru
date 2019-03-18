@@ -23,16 +23,6 @@ gulp.task('reception', () => {
 });
 
 
-let filesRename = () => {
-    gulp.src('app/html/page4396977.html')
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('/reception.html'))
-        .pipe(gulp.dest('./'));
-};
-
-
 
 gulp.task('clean', () => {
     return delFiles('*.html');
