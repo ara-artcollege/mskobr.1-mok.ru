@@ -1,0 +1,25 @@
+{
+  "name": "mskobr.1-mok.ru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1-mok/mskobr.1-mok.ru.git"
+  },
+  "author": "Golik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1-mok/mskobr.1-mok.ru/issues"
+  },
+  "homepage": "https://github.com/1-mok/mskobr.1-mok.ru#readme",
+  "dependencies": {
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0"
+  }
+}
