@@ -12,13 +12,28 @@ gulp.task('main', () => {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('reception', () => {
+    return gulp.src('app/html/page4396977.html')
+        .pipe(htmlMin({ collapseWhitespace: true }))
+        .pipe(gulpRename('/reception.html'))
+        .pipe(gulp.dest('./'));
+});
+
+
+
+
 gulp.task('clean', () => {
-    return delFiles()
+    return delFiles('*.html');
 })
 
-gulp.task('html:watch', () => {
-    return gulp.watch('app/html/*.html', gulp.parallel('main'))
+gulp.task('w', () => {
+    return gulp.watch('app/html/*.html', gulp.series('default'))
 })
 
-gulp.task('default',
-    gulp.parallel('main'));
+gulp.task('default', gulp.series(
+    'clean',
+    gulp.parallel(
+        'main',
+        'reception',
+        )
+));
