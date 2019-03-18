@@ -1,7 +1,7 @@
-const   gulp = require('gulp'),
-        gulpRename = require('gulp-rename'),
-        delFiles = require('del'),
-        htmlMin = require('gulp-htmlmin');
+const gulp = require('gulp'),
+    gulpRename = require('gulp-rename'),
+    delFiles = require('del'),
+    htmlMin = require('gulp-htmlmin');
 
 
 gulp.task('main', () => {
