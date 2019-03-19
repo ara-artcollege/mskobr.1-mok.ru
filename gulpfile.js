@@ -23,11 +23,37 @@ gulp.task('reception', () => {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('cstv:about', () => {
+    return gulp.src('app/html/page4024424.html')
+        .pipe(gulpReplace('="css/', '="../css/'))
+        .pipe(gulpReplace('="js/', '="../js/'))
+        .pipe(gulpReplace('\"images/', '\"../images/'))
+        .pipe(gulpReplace('\'images/', '\'../images/'))
+        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulpRename('cstv/about.html'))
+        .pipe(gulp.dest('./'));
+});
 
+gulp.task('cstv:documents', () => {
+    return gulp.src('app/html/page4117307.html')
+        .pipe(gulpReplace('="css/', '="../css/'))
+        .pipe(gulpReplace('="js/', '="../js/'))
+        .pipe(gulpReplace('\"images/', '\"../images/'))
+        .pipe(gulpReplace('\'images/', '\'../images/'))
+        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulpRename('cstv/documents.html'))
+        .pipe(gulp.dest('./'));
+});
 
 gulp.task('clean', () => {
     return delFiles(['*.html', 'cstv']);
-})
+});
 
 
 gulp.task('default', gulp.series(
@@ -35,6 +61,8 @@ gulp.task('default', gulp.series(
     gulp.parallel(
         'main',
         'reception',
+        'cstv:about',
+        'cstv:documents'
     )
 ));
 
