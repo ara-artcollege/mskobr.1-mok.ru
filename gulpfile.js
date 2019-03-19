@@ -26,7 +26,7 @@ gulp.task('reception', () => {
 
 
 gulp.task('clean', () => {
-    return delFiles('*.html');
+    return delFiles(['*.html', 'cstv']);
 })
 
 
