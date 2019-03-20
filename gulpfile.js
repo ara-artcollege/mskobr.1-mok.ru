@@ -140,7 +140,7 @@ gulp.task('cstv:success', () => {
 });
 
 gulp.task('cstv:monitoring', () => {
-    return gulp.src('app/html/page4209200.html')
+    return gulp.src('app/html/page4211252.html')
         .pipe(gulpReplace('="css/', '="../css/'))
         .pipe(gulpReplace('="js/', '="../js/'))
         .pipe(gulpReplace('\"images/', '\"../images/'))
@@ -195,6 +195,34 @@ gulp.task('cstv:feedback', () => {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('cstv:competences', () => {
+    return gulp.src('app/html/page4209734.html')
+        .pipe(gulpReplace('="css/', '="../css/'))
+        .pipe(gulpReplace('="js/', '="../js/'))
+        .pipe(gulpReplace('\"images/', '\"../images/'))
+        .pipe(gulpReplace('\'images/', '\'../images/'))
+        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulpRename('cstv/competences.html'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('cstv:archive', () => {
+    return gulp.src('app/html/page4216643.html')
+        .pipe(gulpReplace('="css/', '="../css/'))
+        .pipe(gulpReplace('="js/', '="../js/'))
+        .pipe(gulpReplace('\"images/', '\"../images/'))
+        .pipe(gulpReplace('\'images/', '\'../images/'))
+        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulpRename('cstv/archive.html'))
+        .pipe(gulp.dest('./'));
+});
+
 // /cstv
 
 
@@ -204,15 +232,17 @@ gulp.task('default', gulp.series(
         'main',
         'reception',
         'cstv:about',
+        'cstv:news',
         'cstv:documents',
-        // 'cstv:graduate',
-        // 'cstv:employer',
-        // 'cstv:news',
-        // 'cstv:research',
-        // 'cstv:success',
-        // 'cstv:monitoring',
-        // 'cstv:photo',
-        // 'cstv:vuz',
-        // 'cstv:feedback',
+        'cstv:graduate',
+        'cstv:employer',
+        'cstv:competences',
+        'cstv:research',
+        'cstv:success',
+        'cstv:monitoring',
+        'cstv:photo',
+        'cstv:vuz',
+        'cstv:feedback',
+        'cstv:archive',
     )
 ));
