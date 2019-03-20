@@ -8,7 +8,6 @@ gulp.task('clean', () => {
     return delFiles(['*.html', 'cstv']);
 });
 
-
 gulp.task('main', () => {
     return gulp.src([
             'app/html/page3969187.html',
@@ -27,7 +26,6 @@ gulp.task('main', () => {
         .pipe(gulp.dest('./'))
 });
 
-// cstv
 gulp.task('cstv', () => {
     return gulp.src([
             'app/html/page4024424.html',
@@ -72,8 +70,6 @@ gulp.task('cstv', () => {
         }))
         .pipe(gulp.dest('./cstv'))
 });
-
-// /cstv
 
 
 gulp.task('default', gulp.series(
