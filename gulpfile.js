@@ -223,6 +223,20 @@ gulp.task('cstv:archive', () => {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('cstv:menu', () => {
+    return gulp.src('app/html/page4240226.html')
+        .pipe(gulpReplace('="css/', '="../css/'))
+        .pipe(gulpReplace('="js/', '="../js/'))
+        .pipe(gulpReplace('\"images/', '\"../images/'))
+        .pipe(gulpReplace('\'images/', '\'../images/'))
+        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulpRename('cstv/menu.html'))
+        .pipe(gulp.dest('./'));
+});
+
 // /cstv
 
 
@@ -244,5 +258,6 @@ gulp.task('default', gulp.series(
         'cstv:vuz',
         'cstv:feedback',
         'cstv:archive',
+        'cstv:menu',
     )
 ));
