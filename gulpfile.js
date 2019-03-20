@@ -43,7 +43,7 @@ gulp.task('cstv', () => {
             'app/html/page4215461.html',
             'app/html/page4209734.html',
             'app/html/page4216643.html',
-            'app/html/page4240226.html',
+            'app/html/page4240226.html'
         ])
         .pipe(gulpReplace('="css/', '="../css/'))
         .pipe(gulpReplace('="js/', '="../js/'))
@@ -66,7 +66,7 @@ gulp.task('cstv', () => {
                 'page4215461': 'feedback',
                 'page4209734': 'competences',
                 'page4216643': 'archive',
-                'page4240226': 'menu',
+                'page4240226': 'menu'
             };
             path.basename = rules[path.basename]
         }))
