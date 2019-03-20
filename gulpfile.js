@@ -13,7 +13,7 @@ gulp.task('main', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('/main.html'))
+        .pipe(gulpRename('main.html'))
         .pipe(gulp.dest('./'));
 });
 
@@ -22,7 +22,7 @@ gulp.task('reception', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('/reception.html'))
+        .pipe(gulpRename('reception.html'))
         .pipe(gulp.dest('./'));
 });
 
@@ -37,8 +37,8 @@ gulp.task('cstv:about', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/about.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('about.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:documents', () => {
@@ -51,8 +51,8 @@ gulp.task('cstv:documents', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/documents.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('documents.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:documents', () => {
@@ -65,8 +65,8 @@ gulp.task('cstv:documents', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/documents.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('documents.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:graduate', () => {
@@ -79,8 +79,8 @@ gulp.task('cstv:graduate', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/graduate.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('graduate.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:employer', () => {
@@ -93,8 +93,8 @@ gulp.task('cstv:employer', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/employer.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('employer.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:news', () => {
@@ -107,8 +107,8 @@ gulp.task('cstv:news', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/news.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('news.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:research', () => {
@@ -121,8 +121,8 @@ gulp.task('cstv:research', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/research.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('research.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:success', () => {
@@ -135,8 +135,8 @@ gulp.task('cstv:success', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/success.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('success.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:monitoring', () => {
@@ -149,8 +149,8 @@ gulp.task('cstv:monitoring', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/monitoring.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('monitoring.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:photo', () => {
@@ -163,8 +163,8 @@ gulp.task('cstv:photo', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/photo.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('photo.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:vuz', () => {
@@ -177,8 +177,8 @@ gulp.task('cstv:vuz', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/vuz.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('vuz.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:feedback', () => {
@@ -191,8 +191,8 @@ gulp.task('cstv:feedback', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/feedback.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('feedback.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:competences', () => {
@@ -205,8 +205,8 @@ gulp.task('cstv:competences', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/competences.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('competences.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:archive', () => {
@@ -219,8 +219,8 @@ gulp.task('cstv:archive', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/archive.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('archive.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 gulp.task('cstv:menu', () => {
@@ -233,8 +233,8 @@ gulp.task('cstv:menu', () => {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulpRename('cstv/menu.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulpRename('menu.html'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 // /cstv
