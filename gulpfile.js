@@ -8,233 +8,69 @@ gulp.task('clean', () => {
     return delFiles(['*.html', 'cstv']);
 });
 
-gulp.task('main', () => {
-    return gulp.src('app/html/page3969187.html')
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('main.html'))
-        .pipe(gulp.dest('./'));
-});
 
-gulp.task('reception', () => {
-    return gulp.src('app/html/page4396977.html')
+gulp.task('main', () => {
+    return gulp.src([
+            'app/html/page3969187.html',
+            'app/html/page4396977.html'
+        ])
         .pipe(htmlMin({
             collapseWhitespace: true
+        }))        
+        .pipe(gulpRename(function(path){
+            let rules = {
+                'page3969187': 'main',
+                'page4396977': 'reception'
+            };
+            path.basename = rules[path.basename]
         }))
-        .pipe(gulpRename('reception.html'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./'))
 });
 
 // cstv
-gulp.task('cstv:about', () => {
-    return gulp.src('app/html/page4024424.html')
+gulp.task('cstv', () => {
+    return gulp.src([
+            'app/html/page4024424.html',
+            'app/html/page4117307.html',
+            'app/html/page4175062.html',
+            'app/html/page4208064.html',
+            'app/html/page5213876.html',
+            'app/html/page4198140.html',
+            'app/html/page4209200.html',
+            'app/html/page4211252.html',
+            'app/html/page4117081.html',
+            'app/html/page4215020.html',
+            'app/html/page4215461.html',
+            'app/html/page4209734.html',
+            'app/html/page4216643.html',
+            'app/html/page4240226.html',
+        ])
         .pipe(gulpReplace('="css/', '="../css/'))
         .pipe(gulpReplace('="js/', '="../js/'))
         .pipe(gulpReplace('\"images/', '\"../images/'))
         .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
+        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))        
+        .pipe(htmlMin({ collapseWhitespace: true }))        
+        .pipe(gulpRename(function(path){
+            let rules = {
+                'page4024424': 'about',
+                'page4117307': 'documents',
+                'page4175062': 'graduate',
+                'page4208064': 'employer',
+                'page5213876': 'news',
+                'page4198140': 'research',
+                'page4209200': 'success',
+                'page4211252': 'monitoring',
+                'page4117081': 'photo',
+                'page4215020': 'vuz',
+                'page4215461': 'feedback',
+                'page4209734': 'competences',
+                'page4216643': 'archive',
+                'page4240226': 'menu',
+            };
+            path.basename = rules[path.basename]
         }))
-        .pipe(gulpRename('about.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:documents', () => {
-    return gulp.src('app/html/page4117307.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('documents.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:documents', () => {
-    return gulp.src('app/html/page4117307.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('documents.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:graduate', () => {
-    return gulp.src('app/html/page4175062.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('graduate.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:employer', () => {
-    return gulp.src('app/html/page4208064.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('employer.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:news', () => {
-    return gulp.src('app/html/page5213876.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('news.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:research', () => {
-    return gulp.src('app/html/page4198140.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('research.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:success', () => {
-    return gulp.src('app/html/page4209200.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('success.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:monitoring', () => {
-    return gulp.src('app/html/page4211252.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('monitoring.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:photo', () => {
-    return gulp.src('app/html/page4117081.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('photo.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:vuz', () => {
-    return gulp.src('app/html/page4215020.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('vuz.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:feedback', () => {
-    return gulp.src('app/html/page4215461.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('feedback.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:competences', () => {
-    return gulp.src('app/html/page4209734.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('competences.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:archive', () => {
-    return gulp.src('app/html/page4216643.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('archive.html'))
-        .pipe(gulp.dest('./cstv'));
-});
-
-gulp.task('cstv:menu', () => {
-    return gulp.src('app/html/page4240226.html')
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))
-        .pipe(htmlMin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulpRename('menu.html'))
-        .pipe(gulp.dest('./cstv'));
+        .pipe(gulp.dest('./cstv'))
 });
 
 // /cstv
@@ -244,20 +80,6 @@ gulp.task('default', gulp.series(
     'clean',
     gulp.parallel(
         'main',
-        'reception',
-        'cstv:about',
-        'cstv:news',
-        'cstv:documents',
-        'cstv:graduate',
-        'cstv:employer',
-        'cstv:competences',
-        'cstv:research',
-        'cstv:success',
-        'cstv:monitoring',
-        'cstv:photo',
-        'cstv:vuz',
-        'cstv:feedback',
-        'cstv:archive',
-        'cstv:menu',
+        'cstv'
     )
 ));
