@@ -12,7 +12,7 @@ gulp.task('clean:tilda', () => {
     return delFiles(['tilda']);
 });
 
-gulp.task('tilda', () => {
+gulp.task('download:tilda', () => {
     return download({
                     'page4396977.html': 'http://mskobr.tilda.ws/reception/',
                     'page3969187.html': 'http://mskobr.tilda.ws/main/',
@@ -100,7 +100,7 @@ gulp.task('cstv', () => {
 
 
 gulp.task('default', gulp.series(
-    'clean', 'tilda',
+    'clean', 'download:tilda',
     gulp.parallel(
         'main',
         'cstv'
