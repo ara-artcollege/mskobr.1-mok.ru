@@ -8,7 +8,7 @@ const gulp = require('gulp'),
 gulp.task('clean', () => {
     return delFiles(['*.html', 'cstv']);
 });
-gulp.task('cleanTilda', () => {
+gulp.task('clean:tilda', () => {
     return delFiles(['tilda']);
 });
 
@@ -105,5 +105,5 @@ gulp.task('default', gulp.series(
         'main',
         'cstv'
     ),
-    'cleanTilda'
+    'clean:tilda'
 ));
