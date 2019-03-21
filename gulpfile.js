@@ -69,10 +69,6 @@ gulp.task('cstv', () => {
             'tilda/page4216643.html',
             'tilda/page4240226.html'
         ])
-        .pipe(gulpReplace('="css/', '="../css/'))
-        .pipe(gulpReplace('="js/', '="../js/'))
-        .pipe(gulpReplace('\"images/', '\"../images/'))
-        .pipe(gulpReplace('\'images/', '\'../images/'))
         .pipe(gulpReplace('target="_blank">~', 'target="_top">'))
         .pipe(htmlMin({
             collapseWhitespace: true
