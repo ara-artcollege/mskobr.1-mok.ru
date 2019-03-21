@@ -10,8 +10,8 @@ gulp.task('clean', () => {
 
 gulp.task('main', () => {
     return gulp.src([
-            'app/html/page3969187.html',
-            'app/html/page4396977.html'
+            'tilda/html/page3969187.html',
+            'tilda/html/page4396977.html'
         ])
         .pipe(htmlMin({
             collapseWhitespace: true
@@ -28,26 +28,26 @@ gulp.task('main', () => {
 
 gulp.task('cstv', () => {
     return gulp.src([
-            'app/html/page4024424.html',
-            'app/html/page4117307.html',
-            'app/html/page4175062.html',
-            'app/html/page4208064.html',
-            'app/html/page5213876.html',
-            'app/html/page4198140.html',
-            'app/html/page4209200.html',
-            'app/html/page4211252.html',
-            'app/html/page4117081.html',
-            'app/html/page4215020.html',
-            'app/html/page4215461.html',
-            'app/html/page4209734.html',
-            'app/html/page4216643.html',
-            'app/html/page4240226.html'
+            'tilda/html/page4024424.html',
+            'tilda/html/page4117307.html',
+            'tilda/html/page4175062.html',
+            'tilda/html/page4208064.html',
+            'tilda/html/page5213876.html',
+            'tilda/html/page4198140.html',
+            'tilda/html/page4209200.html',
+            'tilda/html/page4211252.html',
+            'tilda/html/page4117081.html',
+            'tilda/html/page4215020.html',
+            'tilda/html/page4215461.html',
+            'tilda/html/page4209734.html',
+            'tilda/html/page4216643.html',
+            'tilda/html/page4240226.html'
         ])
         .pipe(gulpReplace('="css/', '="../css/'))
         .pipe(gulpReplace('="js/', '="../js/'))
         .pipe(gulpReplace('\"images/', '\"../images/'))
         .pipe(gulpReplace('\'images/', '\'../images/'))
-        .pipe(gulpReplace('target="_blank"> ', 'target="_parent">'))        
+        .pipe(gulpReplace('target="_blank">~', 'target="_top">'))        
         .pipe(htmlMin({ collapseWhitespace: true }))        
         .pipe(gulpRename(function(path){
             let rules = {
