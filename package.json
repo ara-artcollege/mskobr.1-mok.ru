@@ -18,6 +18,7 @@
   "homepage": "https://github.com/1-mok/mskobr.1-mok.ru#readme",
   "dependencies": {
     "del": "^4.0.0",
+    "gulp-download-files": "0.0.3",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0"
