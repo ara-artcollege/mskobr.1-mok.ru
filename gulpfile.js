@@ -3,13 +3,6 @@ const gulp = require('gulp'),
     download = require('gulp-download-files'),
     gulpReplace = require('gulp-replace');
 
-gulp.task('clean', () => {
-    return delFiles(['*.html', 'cstv']);
-});
-gulp.task('clean:tilda', () => {
-    return delFiles(['tilda']);
-});
-
 gulp.task('download:tilda', () => {
     return download({
                     'reception.html':           'http://mskobr.tilda.ws/reception/',
@@ -32,6 +25,14 @@ gulp.task('download:tilda', () => {
 
                     })
         .pipe(gulp.dest('tilda'))
+});
+
+gulp.task('clean', () => {
+    return delFiles(['*.html', 'cstv']);
+});
+
+gulp.task('clean:tilda', () => {
+    return delFiles(['tilda']);
 });
 
 gulp.task('main', () => {
