@@ -28,7 +28,10 @@ gulp.task('download:tilda', () => {
 });
 
 gulp.task('clean', () => {
-    return delFiles(['*.html', 'cstv']);
+    return delFiles([
+                    '*.html',
+                    'cstv'
+                ]);
 });
 
 gulp.task('clean:tilda', () => {
