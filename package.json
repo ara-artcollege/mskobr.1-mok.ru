@@ -19,8 +19,6 @@
   "dependencies": {
     "del": "^4.0.0",
     "gulp-download-files": "0.0.3",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0"
   },
   "devDependencies": {
