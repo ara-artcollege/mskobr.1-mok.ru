@@ -14,8 +14,8 @@ gulp.task('clean:tilda', () => {
 
 gulp.task('download:tilda', () => {
     return download({
-                    'page4396977.html': 'http://mskobr.tilda.ws/reception/',
-                    'page3969187.html': 'http://mskobr.tilda.ws/main/',
+                    'reception.html':       'http://mskobr.tilda.ws/reception/',
+                    'main.html':            'http://mskobr.tilda.ws/main/',
                     'page4024424.html': 'http://mskobr.tilda.ws/cstv/about/',
                     'page5213876.html': 'http://mskobr.tilda.ws/cstv/news/',
                     'page4117307.html': 'http://mskobr.tilda.ws/cstv/documents/',
@@ -30,27 +30,19 @@ gulp.task('download:tilda', () => {
                     'page4216643.html': 'http://mskobr.tilda.ws/cstv/archive/',
                     'page4215461.html': 'http://mskobr.tilda.ws/cstv/feedback/',
                     'page4240226.html': 'http://mskobr.tilda.ws/cstv/menu/',
-                    'page4143660.html': 'http://mskobr.tilda.ws/pervoklassnik/'
+                    'pervoklassnik.html':   'http://mskobr.tilda.ws/pervoklassnik/'
                     })
         .pipe(gulp.dest('tilda'))
 });
 
 gulp.task('main', () => {
     return gulp.src([
-            'tilda/page3969187.html',
-            'tilda/page4396977.html',
-            'tilda/page4143660.html'
+            'tilda/main.html',
+            'tilda/reception.html',
+            'tilda/pervoklassnik.html'
         ])
         .pipe(htmlMin({
             collapseWhitespace: true
-        }))
-        .pipe(gulpRename(function (path) {
-            let rules = {
-                'page3969187': 'main',
-                'page4396977': 'reception',
-                'page4143660': 'pervoklassnik'
-            };
-            path.basename = rules[path.basename]
         }))
         .pipe(gulp.dest('./'))
 });
