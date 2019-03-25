@@ -59,6 +59,9 @@ gulp.task('download:tilda', () => {
                     'cstv/menu.html':
                     'http://mskobr.tilda.ws/cstv/menu/',
 
+                    'mesh.html':
+                    'http://mskobr.tilda.ws/mesh/',
+
                     '404/404.html':
                     'http://mskobr.tilda.ws/error/'
 
