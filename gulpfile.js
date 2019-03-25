@@ -57,7 +57,10 @@ gulp.task('download:tilda', () => {
                     'http://mskobr.tilda.ws/cstv/feedback/',
 
                     'cstv/menu.html':
-                    'http://mskobr.tilda.ws/cstv/menu/'
+                    'http://mskobr.tilda.ws/cstv/menu/',
+
+                    '404/404.html':
+                    'http://mskobr.tilda.ws/error/'
 
                     })
         .pipe(gulp.dest('tilda'))
@@ -80,6 +83,12 @@ gulp.task('main', () => {
         .pipe(gulp.dest('./'))
 });
 
+gulp.task('404', () => {
+    return gulp.src('tilda/404/404.html')
+        .pipe(gulpReplace('target="_blank">~', 'target="_top">'))
+        .pipe(gulp.dest('./'))
+});
+
 gulp.task('school', () => {
     return gulp.src('tilda/school/*.html')
         .pipe(gulp.dest('./school'))
@@ -97,7 +106,8 @@ gulp.task('default', gulp.series(
     gulp.parallel(
         'main',
         'school',
-        'cstv'
+        'cstv',
+        '404'
     ),
     'clean:tilda'
 ));
