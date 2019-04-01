@@ -1,11 +1,44 @@
 let date = new Date();
 
-let i = date.getMonth();
+// let i = date.getMonth();
 
-let   days = data[i].days,
-      firstDay = data[i].firstDay,
-      month = data[i].month,
-      weeks = data[i].weeks;
+let i = 5;
+
+// let days = moment().daysInMonth(),
+//     firstDay = moment.localeData().firstDayOfWeek(),
+//     month = moment().month() + 1;
+
+let days = data[i].days,
+    firstDay = data[i].firstDay,
+    month = data[i].month;
+
+function weeksMonth(gDays, gFirstDay) {
+    let daysWeeks = 0;
+    let iDays = 0;
+    let gfirst = true;
+    while (iDays > 0) {
+        if (gfirst) {
+            iDays = iDays - (8 - gFirstDay)
+            gfirst = false;
+            daysWeeks++;
+            //console.log(gFirstDay);
+        }
+        daysWeeks++;
+        iDays -= 7;
+        if (iDays < 0) {
+            break;
+        }
+    }
+    console.log(daysWeeks);
+    return daysWeeks;
+};
+
+
+
+let weeks = weeksMonth(days, firstDay);
+
+console.log(data[i].weeks);
+
 
 class MenuPmok {
     constructor(subD, tableId) {
@@ -42,16 +75,16 @@ function tdRender(url) {
             } else if (g < days + 1) {
                 if (i === 5 || i === 6) {
                     if (d <= days) {
-                        result += `<td>${access = (d < 10) ? 0 : ''}${d++}.${month}</td>`;
+                        result += `<td>${access = (d < 10) ? 0 : ''}${d++}.${access = (month < 10) ? 0 : ''}${month}</td>`;
                     } else {
                         result += `<td>&nbsp;</td>`;
-                    } 
+                    }
                 } else {
                     if (d <= days) {
-                        result += `<td><a href="http://files.1-mok.ru/volan/${url}-${access = (d < 10) ? 0 : ''}${d}.${month}.pdf?v=${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}" target="_blank">${access = (d < 10) ? 0 : ''}${d++}.${month}</a></td>`;
+                        result += `<td><a href="http://files.1-mok.ru/volan/${url}-${access = (d < 10) ? 0 : ''}${d}.${access = (month < 10) ? 0 : ''}${month}.pdf?v=${date.getDate()}.${date.getMonth() + 1}.${moment().get('year')}" target="_blank">${access = (d < 10) ? 0 : ''}${d++}.${access = (month < 10) ? 0 : ''}${month}</a></td>`;
                     } else {
-                            result += `<td>&nbsp;</td>`;
-                        }
+                        result += `<td>&nbsp;</td>`;
+                    }
                 }
 
             }
@@ -68,9 +101,9 @@ window.onload = () => {
     let dsTable = new MenuPmok('ds', 'pmok-ds');
     let soshTable = new MenuPmok('sosh', 'pmok-sosh');
     let kTable = new MenuPmok('k', 'pmok-k');
-    
+
     let pmokH = document.getElementById('pmok-h2');
-    pmokH.innerText = pmokH.textContent.replace(/{{year}}/g, `${date.getFullYear()}`);
+    pmokH.innerText = pmokH.textContent.replace(/{{year}}/g, `${moment().get('year')}`);
 
 
 
