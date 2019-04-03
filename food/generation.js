@@ -67,7 +67,7 @@ function tdRender(url) {
                 } else {
                     if (d <= days) {
                         if (d <= date) {
-                            result += `<td class="t431__td" style="width:10vw;font-size: inherit; border-width: 1px 1px 1px 1px; border-color: #8c8c8c; color: #4d4c4c;border-top: 0 !important;"><a href="http://files.1-mok.ru/volan/${url}-${access = (d < 10) ? 0 : ''}${d}.${access = (month < 10) ? 0 : ''}${month}.pdf?v=${date}.${month}.${year}" target="_blank"><b>${access = (d < 10) ? 0 : ''}${d++}.${access = (month < 10) ? 0 : ''}${month}</b></a></td>`;
+                            result += `<td class="t431__td" style="width:10vw;font-size: inherit; border-width: 1px 1px 1px 1px; border-color: #8c8c8c; color: #4d4c4c;border-top: 0 !important;"><a href="http://files.1-mok.ru/food/${url}-${access = (d < 10) ? 0 : ''}${d}.${access = (month < 10) ? 0 : ''}${month}.pdf?v=${date}.${month}.${year}" target="_blank"><b>${access = (d < 10) ? 0 : ''}${d++}.${access = (month < 10) ? 0 : ''}${month}</b></a></td>`;
                         } else {
                             result += `<td class="t431__td" style="width:10vw;font-size: inherit; border-width: 1px 1px 1px 1px; border-color: #8c8c8c; color: #4d4c4c;border-top: 0 !important;"><b>${access = (d < 10) ? 0 : ''}${d++}.${access = (month < 10) ? 0 : ''}${month}</b></td>`;
                         }
