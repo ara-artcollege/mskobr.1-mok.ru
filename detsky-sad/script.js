@@ -1,0 +1,2 @@
+var date = new Date();
+document.body.innerHTML = document.body.innerHTML.replace('prikazi-zachislenie-ds.pdf',`prikazi-zachislenie-ds.pdf?v=${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`);

@@ -63,7 +63,10 @@ gulp.task('download:tilda', () => {
                     'http://mskobr.tilda.ws/mesh/',
 
                     '404/404.html':
-                    'http://mskobr.tilda.ws/error/'
+                    'http://mskobr.tilda.ws/error/',
+
+                    'detsky-sad/detsky-sad.html':
+                    'http://mskobr.tilda.ws/detsky-sad/'
 
                     })
         .pipe(gulp.dest('tilda'))
@@ -72,6 +75,7 @@ gulp.task('download:tilda', () => {
 gulp.task('clean', () => {
     return delFiles([
                     '*.html',
+                    'detsky-sad/*.html',
                     'cstv',
                     'school'
                 ]);
@@ -84,6 +88,12 @@ gulp.task('clean:tilda', () => {
 gulp.task('main', () => {
     return gulp.src('tilda/*.html')
         .pipe(gulp.dest('./'))
+});
+
+gulp.task('detsky-sad', () => {
+    return gulp.src('tilda/detsky-sad/detsky-sad.html')
+        .pipe(gulpReplace('</body>', '<script src="script.js?v=1.0"></script></body>'))
+        .pipe(gulp.dest('detsky-sad'))
 });
 
 gulp.task('404', () => {
@@ -110,6 +120,7 @@ gulp.task('default', gulp.series(
         'main',
         'school',
         'cstv',
+        'detsky-sad',
         '404'
     ),
     'clean:tilda'
