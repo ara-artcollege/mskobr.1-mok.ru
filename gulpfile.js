@@ -66,7 +66,10 @@ gulp.task('download:tilda', () => {
                     'http://mskobr.tilda.ws/error/',
 
                     'detsky-sad/detsky-sad.html':
-                    'http://mskobr.tilda.ws/detsky-sad/'
+                    'http://mskobr.tilda.ws/detsky-sad/',
+
+                    'mail-tnx.html':
+                    'http://mskobr.tilda.ws/mail-tnx/'
 
                     })
         .pipe(gulp.dest('tilda'))
