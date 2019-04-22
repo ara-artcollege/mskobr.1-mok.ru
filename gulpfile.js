@@ -72,7 +72,7 @@ gulp.task('download:tilda', () => {
                     'http://mskobr.tilda.ws/mail-tnx/'
 
                     })
-        .pipe(gulp.dest('tilda'))
+        .pipe(gulp.dest('tilda'));
 });
 
 gulp.task('clean', () => {
@@ -90,30 +90,30 @@ gulp.task('clean:tilda', () => {
 
 gulp.task('main', () => {
     return gulp.src('tilda/*.html')
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('detsky-sad', () => {
     return gulp.src('tilda/detsky-sad/detsky-sad.html')
         .pipe(gulpReplace('</body>', '<script src="script.js?v=1.0"></script></body>'))
-        .pipe(gulp.dest('detsky-sad'))
+        .pipe(gulp.dest('detsky-sad'));
 });
 
 gulp.task('404', () => {
     return gulp.src('tilda/404/404.html')
         .pipe(gulpReplace('target="_blank">~', 'target="_top">'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('school', () => {
     return gulp.src('tilda/school/*.html')
-        .pipe(gulp.dest('./school'))
+        .pipe(gulp.dest('./school'));
 });
 
 gulp.task('cstv', () => {
     return gulp.src('tilda/cstv/*.html')
         .pipe(gulpReplace('target="_blank">~', 'target="_top">'))
-        .pipe(gulp.dest('./cstv'))
+        .pipe(gulp.dest('./cstv'));
 });
 
 
