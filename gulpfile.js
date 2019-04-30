@@ -8,6 +8,9 @@ gulp.task('download:tilda', () => {
                     'reception.html':
                     'http://mskobr.tilda.ws/reception/',
 
+                    'reception/voprosy.html':
+                    'http://mskobr.tilda.ws/reception/voprosy/',
+
                     'main.html':
                     'http://mskobr.tilda.ws/main/',
 
@@ -80,7 +83,8 @@ gulp.task('clean', () => {
                     '*.html',
                     'detsky-sad/*.html',
                     'cstv',
-                    'school'
+                    'school',
+                    'reception'
                 ]);
 });
 
@@ -116,6 +120,11 @@ gulp.task('cstv', () => {
         .pipe(gulp.dest('./cstv'));
 });
 
+gulp.task('reception', () => {
+    return gulp.src('tilda/reception/*.html')
+        .pipe(gulp.dest('./reception'));
+});
+
 
 gulp.task('default', gulp.series(
     'clean', 'download:tilda',
@@ -124,7 +133,8 @@ gulp.task('default', gulp.series(
         'school',
         'cstv',
         'detsky-sad',
-        '404'
+        '404',
+        'reception'
     ),
     'clean:tilda'
 ));
