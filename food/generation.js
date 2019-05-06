@@ -1,8 +1,11 @@
 let days = moment().daysInMonth(),
-    firstDay = moment.localeData().firstDayOfWeek(),
+    dJs = new Date(),
+    firstDay = dJs.getDay(),
     month = moment().month() + 1,
     date = moment().get('date'),
     year = moment().get('year');
+
+console.log(firstDay);
 
 function weeksMonth(gDays, gFirstDay) {
     let daysWeeks = 0;
@@ -21,7 +24,7 @@ function weeksMonth(gDays, gFirstDay) {
         }
     }
     return daysWeeks;
-};
+}
  
 let weeks = weeksMonth(days, firstDay);
 
@@ -52,7 +55,7 @@ function tdRender(url) {
     let g = 1;
     let d = 1;
     for (let i = 0; i < weeks; i++) {
-        result += '<tr class="t431__oddrow" style="background: #ffffff">'
+        result += '<tr class="t431__oddrow" style="background: #ffffff">';
         for (let i = 0; i < 7; i++) {
             if (g < firstDay) {
                 g++;
@@ -78,7 +81,7 @@ function tdRender(url) {
                 }
             }
         }
-        result += '</tr>'
+        result += '</tr>';
     }
 
     return result;
