@@ -5,87 +5,120 @@ const gulp = require('gulp'),
 
 gulp.task('download:tilda', () => {
     return download({
-                    'reception.html':
-                    'http://mskobr.tilda.ws/reception/',
+        'reception/priem.html':
+            'http://mskobr.tilda.ws/reception/priem/',
 
-                    'reception/voprosy.html':
-                    'http://mskobr.tilda.ws/reception/voprosy/',
+        'reception/mos.html':
+            'http://mskobr.tilda.ws/reception/mos/',
 
-                    'main.html':
-                    'http://mskobr.tilda.ws/main/',
+        'reception/budget.html':
+            'http://mskobr.tilda.ws/reception/budget/',
 
-                    'school/pervoklassnik.html':
-                    'http://mskobr.tilda.ws/school/pervoklassnik/',
+        'reception/ball.html':
+            'http://mskobr.tilda.ws/reception/ball/',
 
-                    'school/pro.html':
-                    'http://mskobr.tilda.ws/school/pro/',
+        'reception/perechen-ispytaniy.html':
+            'http://mskobr.tilda.ws/reception/perechen-ispytaniy/',
 
-                    'cstv/about.html':
-                    'http://mskobr.tilda.ws/cstv/about/',
+        'reception/zaochnoe.html':
+            'http://mskobr.tilda.ws/reception/zaochnoe/',
 
-                    'cstv/news.html':
-                    'http://mskobr.tilda.ws/cstv/news/',
+        'reception/platnoe.html':
+            'http://mskobr.tilda.ws/reception/platnoe/',
 
-                    'cstv/documents.html':
-                    'http://mskobr.tilda.ws/cstv/documents/',
+        'reception/perevod.html':
+            'http://mskobr.tilda.ws/reception/perevod/',
 
-                    'cstv/graduate.html':
-                    'http://mskobr.tilda.ws/cstv/graduate/',
+        'reception/voprosy.html':
+            'http://mskobr.tilda.ws/reception/voprosy/',
 
-                    'cstv/employer.html':
-                    'http://mskobr.tilda.ws/cstv/employer/',
+        'reception/medosmotr.html':
+            'http://mskobr.tilda.ws/reception/medosmotr/',
 
-                    'cstv/competences.html':
-                    'http://mskobr.tilda.ws/cstv/competences/',
+        'reception/documents.html':
+            'http://mskobr.tilda.ws/reception/documents/',
 
-                    'cstv/research.html':
-                    'http://mskobr.tilda.ws/cstv/research/',
+        'reception/adres.html':
+            'http://mskobr.tilda.ws/reception/adres/',
 
-                    'cstv/success.html':
-                    'http://mskobr.tilda.ws/cstv/success/',
+        'reception/voprosy.html':
+            'http://mskobr.tilda.ws/reception/voprosy/',
 
-                    'cstv/monitoring.html':
-                    'http://mskobr.tilda.ws/cstv/monitoring/',
+        'main.html':
+            'http://mskobr.tilda.ws/main/',
 
-                    'cstv/photo.html':
-                    'http://mskobr.tilda.ws/cstv/photo/',
+        'school/pervoklassnik.html':
+            'http://mskobr.tilda.ws/school/pervoklassnik/',
 
-                    'cstv/vuz.html':
-                    'http://mskobr.tilda.ws/cstv/vuz/',
+        'school/pro.html':
+            'http://mskobr.tilda.ws/school/pro/',
 
-                    'cstv/archive.html':
-                    'http://mskobr.tilda.ws/cstv/archive/',
+        'cstv/about.html':
+            'http://mskobr.tilda.ws/cstv/about/',
 
-                    'cstv/feedback.html':
-                    'http://mskobr.tilda.ws/cstv/feedback/',
+        'cstv/news.html':
+            'http://mskobr.tilda.ws/cstv/news/',
 
-                    'cstv/menu.html':
-                    'http://mskobr.tilda.ws/cstv/menu/',
+        'cstv/documents.html':
+            'http://mskobr.tilda.ws/cstv/documents/',
 
-                    'mesh.html':
-                    'http://mskobr.tilda.ws/mesh/',
+        'cstv/graduate.html':
+            'http://mskobr.tilda.ws/cstv/graduate/',
 
-                    '404/404.html':
-                    'http://mskobr.tilda.ws/error/',
+        'cstv/employer.html':
+            'http://mskobr.tilda.ws/cstv/employer/',
 
-                    'detsky-sad/detsky-sad.html':
-                    'http://mskobr.tilda.ws/detsky-sad/',
+        'cstv/competences.html':
+            'http://mskobr.tilda.ws/cstv/competences/',
 
-                    'mail-tnx.html':
-                    'http://mskobr.tilda.ws/mail-tnx/'
+        'cstv/research.html':
+            'http://mskobr.tilda.ws/cstv/research/',
 
-                    })
+        'cstv/success.html':
+            'http://mskobr.tilda.ws/cstv/success/',
+
+        'cstv/monitoring.html':
+            'http://mskobr.tilda.ws/cstv/monitoring/',
+
+        'cstv/photo.html':
+            'http://mskobr.tilda.ws/cstv/photo/',
+
+        'cstv/vuz.html':
+            'http://mskobr.tilda.ws/cstv/vuz/',
+
+        'cstv/archive.html':
+            'http://mskobr.tilda.ws/cstv/archive/',
+
+        'cstv/feedback.html':
+            'http://mskobr.tilda.ws/cstv/feedback/',
+
+        'cstv/menu.html':
+            'http://mskobr.tilda.ws/cstv/menu/',
+
+        'mesh.html':
+            'http://mskobr.tilda.ws/mesh/',
+
+        '404/404.html':
+            'http://mskobr.tilda.ws/error/',
+
+        'detsky-sad/detsky-sad.html':
+            'http://mskobr.tilda.ws/detsky-sad/',
+
+        'mail-tnx.html':
+            'http://mskobr.tilda.ws/mail-tnx/'
+
+    })
         .pipe(gulp.dest('tilda'));
 });
 
 gulp.task('clean', () => {
     return delFiles([
-                    '*.html',
-                    'detsky-sad/*.html',
-                    'cstv',
-                    'school',
-                    'reception'
-                ]);
+        '*.html',
+        'detsky-sad/*.html',
+        'cstv',
+        'school',
+        'reception'
+    ]);
 });
 
 gulp.task('clean:tilda', () => {
@@ -122,6 +155,7 @@ gulp.task('cstv', () => {
 
 gulp.task('reception', () => {
     return gulp.src('tilda/reception/*.html')
+        .pipe(gulpReplace('target="_blank">~', 'target="_top">'))
         .pipe(gulp.dest('./reception'));
 });
 
