@@ -127,6 +127,7 @@ gulp.task('clean:tilda', () => {
 
 gulp.task('main', () => {
     return gulp.src('tilda/*.html')
+        .pipe(gulpReplace('target="_blank">~', 'target="_top">'))
         .pipe(gulp.dest('./'));
 });
 
