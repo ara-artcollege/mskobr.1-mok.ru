@@ -1,11 +1,8 @@
 let days = moment().daysInMonth(),
-    dJs = new Date(),
-    firstDay = dJs.getDay(),
     month = moment().month() + 1,
     date = moment().get('date'),
-    year = moment().get('year');
-
-console.log(firstDay);
+    year = moment().get('year'),
+    firstDay = moment(moment().startOf('month').format('YYYY-MM-DD')).day();
 
 function weeksMonth(gDays, gFirstDay) {
     let daysWeeks = 0;
@@ -95,7 +92,5 @@ window.onload = () => {
 
     let pmokH = document.getElementById('pmok-h2');
     pmokH.innerText = pmokH.textContent.replace(/{{year}}/g, `${year}`);
-
-
 
 };
