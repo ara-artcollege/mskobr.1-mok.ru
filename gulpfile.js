@@ -6,106 +6,106 @@ const gulp = require('gulp'),
 gulp.task('download:tilda', () => {
     return download({
         'reception/priem.html':
-            'http://1-mok.mskobr.tilda.ws/reception/priem/',
+            'http://main.mskobr.1-mok.ru/reception/priem/',
 
         'reception/mos.html':
-            'http://1-mok.mskobr.tilda.ws/reception/mos/',
+            'http://main.mskobr.1-mok.ru/reception/mos/',
 
         'reception/budget.html':
-            'http://1-mok.mskobr.tilda.ws/reception/budget/',
+            'http://main.mskobr.1-mok.ru/reception/budget/',
 
         'reception/ball.html':
-            'http://1-mok.mskobr.tilda.ws/reception/ball/',
+            'http://main.mskobr.1-mok.ru/reception/ball/',
 
         'reception/perechen-ispytaniy.html':
-            'http://1-mok.mskobr.tilda.ws/reception/perechen-ispytaniy/',
+            'http://main.mskobr.1-mok.ru/reception/perechen-ispytaniy/',
 
         'reception/zaochnoe.html':
-            'http://1-mok.mskobr.tilda.ws/reception/zaochnoe/',
+            'http://main.mskobr.1-mok.ru/reception/zaochnoe/',
 
         'reception/platnoe.html':
-            'http://1-mok.mskobr.tilda.ws/reception/platnoe/',
+            'http://main.mskobr.1-mok.ru/reception/platnoe/',
 
         'reception/perevod.html':
-            'http://1-mok.mskobr.tilda.ws/reception/perevod/',
+            'http://main.mskobr.1-mok.ru/reception/perevod/',
 
         'reception/voprosy.html':
-            'http://1-mok.mskobr.tilda.ws/reception/voprosy/',
+            'http://main.mskobr.1-mok.ru/reception/voprosy/',
 
         'reception/medosmotr.html':
-            'http://1-mok.mskobr.tilda.ws/reception/medosmotr/',
+            'http://main.mskobr.1-mok.ru/reception/medosmotr/',
 
         'reception/documents.html':
-            'http://1-mok.mskobr.tilda.ws/reception/documents/',
+            'http://main.mskobr.1-mok.ru/reception/documents/',
 
         'reception/adres.html':
-            'http://1-mok.mskobr.tilda.ws/reception/adres/',
+            'http://main.mskobr.1-mok.ru/reception/adres/',
 
         'reception/voprosy.html':
-            'http://1-mok.mskobr.tilda.ws/reception/voprosy/',
+            'http://main.mskobr.1-mok.ru/reception/voprosy/',
 
         'main.html':
-            'http://1-mok.mskobr.tilda.ws/main/',
+            'http://main.mskobr.1-mok.ru/main/',
 
         'school/pervoklassnik.html':
-            'http://1-mok.mskobr.tilda.ws/school/pervoklassnik/',
+            'http://main.mskobr.1-mok.ru/school/pervoklassnik/',
 
         'school/pro.html':
-            'http://1-mok.mskobr.tilda.ws/school/pro/',
+            'http://main.mskobr.1-mok.ru/school/pro/',
 
         'cstv/about.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/about/',
+            'http://main.mskobr.1-mok.ru/cstv/about/',
 
         'cstv/news.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/news/',
+            'http://main.mskobr.1-mok.ru/cstv/news/',
 
         'cstv/documents.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/documents/',
+            'http://main.mskobr.1-mok.ru/cstv/documents/',
 
         'cstv/graduate.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/graduate/',
+            'http://main.mskobr.1-mok.ru/cstv/graduate/',
 
         'cstv/employer.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/employer/',
+            'http://main.mskobr.1-mok.ru/cstv/employer/',
 
         'cstv/competences.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/competences/',
+            'http://main.mskobr.1-mok.ru/cstv/competences/',
 
         'cstv/research.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/research/',
+            'http://main.mskobr.1-mok.ru/cstv/research/',
 
         'cstv/success.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/success/',
+            'http://main.mskobr.1-mok.ru/cstv/success/',
 
         'cstv/monitoring.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/monitoring/',
+            'http://main.mskobr.1-mok.ru/cstv/monitoring/',
 
         'cstv/photo.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/photo/',
+            'http://main.mskobr.1-mok.ru/cstv/photo/',
 
         'cstv/vuz.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/vuz/',
+            'http://main.mskobr.1-mok.ru/cstv/vuz/',
 
         'cstv/archive.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/archive/',
+            'http://main.mskobr.1-mok.ru/cstv/archive/',
 
         'cstv/feedback.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/feedback/',
+            'http://main.mskobr.1-mok.ru/cstv/feedback/',
 
         'cstv/menu.html':
-            'http://1-mok.mskobr.tilda.ws/cstv/menu/',
+            'http://main.mskobr.1-mok.ru/cstv/menu/',
 
         'mesh.html':
-            'http://1-mok.mskobr.tilda.ws/mesh/',
+            'http://main.mskobr.1-mok.ru/mesh/',
 
         '404/404.html':
-            'http://1-mok.mskobr.tilda.ws/error/',
+            'http://main.mskobr.1-mok.ru/error/',
 
         'detsky-sad/detsky-sad.html':
-            'http://1-mok.mskobr.tilda.ws/detsky-sad/',
+            'http://main.mskobr.1-mok.ru/detsky-sad/',
 
         'mail-tnx.html':
-            'http://1-mok.mskobr.tilda.ws/mail-tnx/'
+            'http://main.mskobr.1-mok.ru/mail-tnx/'
 
     })
         .pipe(gulp.dest('tilda'));
