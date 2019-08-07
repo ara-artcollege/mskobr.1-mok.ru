@@ -17,3 +17,5 @@ RewriteRule ^school/$ school/pervoklassnik.html [NC]
 RewriteRule ^mail-tnx/$ mail-tnx.html [NC]
 
 RewriteRule ^reception/$ reception/priem.html [NC]
+
+RewriteRule ^reception/mos$ reception/mos.html [NC]
