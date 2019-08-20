@@ -41,6 +41,9 @@ gulp.task('download:tilda', () => {
         'reception/adres.html':
             'http://main.mskobr.1-mok.ru/reception/adres/',
 
+        'reception/meeting.html':
+            'http://main.mskobr.1-mok.ru/reception/meeting/',
+
         'reception/voprosy.html':
             'http://main.mskobr.1-mok.ru/reception/voprosy/',
 
