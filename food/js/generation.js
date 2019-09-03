@@ -2,7 +2,10 @@ let days = moment().daysInMonth(),
     month = moment().month() + 1,
     date = moment().get('date'),
     year = moment().get('year'),
-    firstDay = moment(moment().startOf('month').format('YYYY-MM-DD')).day();
+    mydate = moment(moment().startOf('month').format('YYYY-MM-DD')),
+    weekDayName =  moment(mydate).format('dddd'),
+    daysWeekAll = {Monday: "1", Tuesday: "2", Wednesday: "3", Thursday: "4", Friday: "5", Saturday: "6", Sunday: "7"},
+    firstDay = daysWeekAll[weekDayName];
 
 function weeksMonth(gDays, gFirstDay) {
     let daysWeeks = 0;
