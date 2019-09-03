@@ -13,7 +13,7 @@ function weeksMonth(gDays, gFirstDay) {
     let gfirst = true;
     while (iDays > 0) {
         if (gfirst) {
-            iDays = iDays - (8 - gFirstDay)
+            iDays = iDays - (8 - gFirstDay);
             gfirst = false;
             daysWeeks++;
         }
