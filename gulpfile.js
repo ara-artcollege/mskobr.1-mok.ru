@@ -5,115 +5,83 @@ const gulp = require('gulp'),
 
 gulp.task('download:tilda', () => {
     return download({
-        'reception/priem.html':
-            'http://main.mskobr.1-mok.ru/reception/priem',
+            'reception/priem.html': 'http://main.mskobr.1-mok.ru/reception/priem',
 
-        'reception/mos.html':
-            'http://main.mskobr.1-mok.ru/reception/mos',
+            'reception/mos.html': 'http://main.mskobr.1-mok.ru/reception/mos',
 
-        'reception/budget.html':
-            'http://main.mskobr.1-mok.ru/reception/budget',
+            'reception/budget.html': 'http://main.mskobr.1-mok.ru/reception/budget',
 
-        'reception/ball.html':
-            'http://main.mskobr.1-mok.ru/reception/ball',
+            'reception/ball.html': 'http://main.mskobr.1-mok.ru/reception/ball',
 
-        'reception/perechen-ispytaniy.html':
-            'http://main.mskobr.1-mok.ru/reception/perechen-ispytaniy',
+            'reception/perechen-ispytaniy.html': 'http://main.mskobr.1-mok.ru/reception/perechen-ispytaniy',
 
-        'reception/zaochnoe.html':
-            'http://main.mskobr.1-mok.ru/reception/zaochnoe',
+            'reception/zaochnoe.html': 'http://main.mskobr.1-mok.ru/reception/zaochnoe',
 
-        'reception/platnoe.html':
-            'http://main.mskobr.1-mok.ru/reception/platnoe',
+            'reception/platnoe.html': 'http://main.mskobr.1-mok.ru/reception/platnoe',
 
-        'reception/perevod.html':
-            'http://main.mskobr.1-mok.ru/reception/perevod',
+            'reception/perevod.html': 'http://main.mskobr.1-mok.ru/reception/perevod',
 
-        'reception/voprosy.html':
-            'http://main.mskobr.1-mok.ru/reception/voprosy',
+            'reception/voprosy.html': 'http://main.mskobr.1-mok.ru/reception/voprosy',
 
-        'reception/medosmotr.html':
-            'http://main.mskobr.1-mok.ru/reception/medosmotr',
+            'reception/medosmotr.html': 'http://main.mskobr.1-mok.ru/reception/medosmotr',
 
-        'reception/documents.html':
-            'http://main.mskobr.1-mok.ru/reception/documents',
+            'reception/documents.html': 'http://main.mskobr.1-mok.ru/reception/documents',
 
-        'reception/adres.html':
-            'http://main.mskobr.1-mok.ru/reception/adres',
+            'reception/adres.html': 'http://main.mskobr.1-mok.ru/reception/adres',
 
-        'reception/meeting.html':
-            'http://main.mskobr.1-mok.ru/reception/meeting',
+            'reception/meeting.html': 'http://main.mskobr.1-mok.ru/reception/meeting',
 
-        'reception/voprosy.html':
-            'http://main.mskobr.1-mok.ru/reception/voprosy',
+            'reception/voprosy.html': 'http://main.mskobr.1-mok.ru/reception/voprosy',
 
-        'reception/zachisleniye.html':
-        'http://main.mskobr.1-mok.ru/reception/zachisleniye',
+            'reception/zachisleniye.html': 'http://main.mskobr.1-mok.ru/reception/zachisleniye',
 
-        'main.html':
-            'http://main.mskobr.1-mok.ru/main',
+            'main.html': 'http://main.mskobr.1-mok.ru/main',
 
-        'school/pervoklassnik.html':
-            'http://main.mskobr.1-mok.ru/school/pervoklassnik',
+            'school/pervoklassnik.html': 'http://main.mskobr.1-mok.ru/school/pervoklassnik',
 
-        'school/pro.html':
-            'http://main.mskobr.1-mok.ru/school/pro',
+            'school/pro.html': 'http://main.mskobr.1-mok.ru/school/pro',
 
-        'cstv/about.html':
-            'http://main.mskobr.1-mok.ru/cstv/about',
+            'cstv/about.html': 'http://main.mskobr.1-mok.ru/cstv/about',
 
-        'cstv/news.html':
-            'http://main.mskobr.1-mok.ru/cstv/news',
+            'cstv/news.html': 'http://main.mskobr.1-mok.ru/cstv/news',
 
-        'cstv/documents.html':
-            'http://main.mskobr.1-mok.ru/cstv/documents',
+            'cstv/documents.html': 'http://main.mskobr.1-mok.ru/cstv/documents',
 
-        'cstv/graduate.html':
-            'http://main.mskobr.1-mok.ru/cstv/graduate',
+            'cstv/graduate.html': 'http://main.mskobr.1-mok.ru/cstv/graduate',
 
-        'cstv/employer.html':
-            'http://main.mskobr.1-mok.ru/cstv/employer',
+            'cstv/employer.html': 'http://main.mskobr.1-mok.ru/cstv/employer',
 
-        'cstv/competences.html':
-            'http://main.mskobr.1-mok.ru/cstv/competences',
+            'cstv/competences.html': 'http://main.mskobr.1-mok.ru/cstv/competences',
 
-        'cstv/research.html':
-            'http://main.mskobr.1-mok.ru/cstv/research',
+            'cstv/research.html': 'http://main.mskobr.1-mok.ru/cstv/research',
 
-        'cstv/success.html':
-            'http://main.mskobr.1-mok.ru/cstv/success',
+            'cstv/success.html': 'http://main.mskobr.1-mok.ru/cstv/success',
 
-        'cstv/monitoring.html':
-            'http://main.mskobr.1-mok.ru/cstv/monitoring',
+            'cstv/monitoring.html': 'http://main.mskobr.1-mok.ru/cstv/monitoring',
 
-        'cstv/photo.html':
-            'http://main.mskobr.1-mok.ru/cstv/photo',
+            'cstv/photo.html': 'http://main.mskobr.1-mok.ru/cstv/photo',
 
-        'cstv/vuz.html':
-            'http://main.mskobr.1-mok.ru/cstv/vuz',
+            'cstv/vuz.html': 'http://main.mskobr.1-mok.ru/cstv/vuz',
 
-        'cstv/archive.html':
-            'http://main.mskobr.1-mok.ru/cstv/archive',
+            'cstv/archive.html': 'http://main.mskobr.1-mok.ru/cstv/archive',
 
-        'cstv/feedback.html':
-            'http://main.mskobr.1-mok.ru/cstv/feedback',
+            'cstv/feedback.html': 'http://main.mskobr.1-mok.ru/cstv/feedback',
 
-        'cstv/menu.html':
-            'http://main.mskobr.1-mok.ru/cstv/menu',
+            'cstv/menu.html': 'http://main.mskobr.1-mok.ru/cstv/menu',
 
-        'mesh.html':
-            'http://main.mskobr.1-mok.ru/mesh',
+            'mesh.html': 'http://main.mskobr.1-mok.ru/mesh',
 
-        '404/404.html':
-            'http://main.mskobr.1-mok.ru/error',
+            '404/404.html': 'http://main.mskobr.1-mok.ru/error',
 
-        'detsky-sad/detsky-sad.html':
-            'http://main.mskobr.1-mok.ru/detsky-sad',
+            'detsky-sad/detsky-sad.html': 'http://main.mskobr.1-mok.ru/detsky-sad',
 
-        'mail-tnx.html':
-            'http://main.mskobr.1-mok.ru/mail-tnx'
+            'detsky-sad/detsky-sad.html': 'http://main.mskobr.1-mok.ru/detsky-sad',
 
-    })
+            'ciklogramma_direktora.html': 'http://main.mskobr.1-mok.ru/ciklogramma_direktora',
+
+            'mail-tnx.html': 'http://main.mskobr.1-mok.ru/mail-tnx'
+
+        })
         .pipe(gulp.dest('tilda'));
 });
 
