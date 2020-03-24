@@ -79,7 +79,9 @@ gulp.task('download:tilda', () => {
 
             'ciklogramma_direktora.html': 'http://main.mskobr.1-mok.ru/ciklogramma_direktora',
 
-            'mail-tnx.html': 'http://main.mskobr.1-mok.ru/mail-tnx'
+            'mail-tnx.html': 'http://main.mskobr.1-mok.ru/mail-tnx',
+
+            'classroom.html': 'http://main.mskobr.1-mok.ru/classroom',
 
         })
         .pipe(gulp.dest('tilda'));

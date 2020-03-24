@@ -21,3 +21,5 @@ RewriteRule ^mail-tnx/$ mail-tnx.html [NC]
 RewriteRule ^reception/$ reception/priem.html [NC]
 
 RewriteRule ^reception/mos$ reception/mos.html [NC]
+
+RewriteRule ^classroom classroom.html [NC]
